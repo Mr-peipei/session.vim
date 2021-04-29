@@ -10,6 +10,15 @@ function! session#create_session(file) abort
     echo 'session.vim: created'
 endfunction
 
+function! session#delete_session(file) abort
+    " call 'delete' join([g:session_path, a:file], s:sep)
+    " call delete(s:_path_join(a:file))
+    call delete(join([g:session_path, a:file], s:sep))
+
+    redraw
+    echo 'session:deleted' a:file
+endfunction
+
 function! session#load_session(file) abort
     " :source で渡されるセッションファイルをロードする
     execute 'source' join([g:session_path, a:file], s:sep)
@@ -64,6 +73,7 @@ function! session#sessions() abort
         "バッファの種類を選択する
         set buftype=nofile
 
+        " A
         " 1. セッション一覧のバッファで`q`を押下するとバッファを破棄
         " 2. `Enter`でセッションをロード
         " の2つのキーマッピングを定義します。

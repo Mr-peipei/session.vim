@@ -95,29 +95,3 @@ g:session_path					*g:session_path*
 <CR>		<Plug>(session-open)
 
 
-------------------------------------------------------------------------------
-関数						*session-functions*
-
-session#create_session({file})			*session#create_session()*
-
-
-session#delete_session({file})			*session#delete_session()*
-
-
-session#load_session({file})			*session#load_session()*
-
-
-session#sessions()				*session#sessions()*
-
-
-==============================================================================
-TODO						*session-todo*
-
-
-
-==============================================================================
-更新履歴					*session-changelog*
-
-
-==============================================================================
-vim:tw=78:ts=8:ft=help:norl:noet:fen:

@@ -11,3 +11,8 @@ command! SessionList call session#sessions()
 " -nargsでコマンドが受け取る引数の数を設定できます
 "1つの引数を受け取れるようにする
 command! -nargs=1 SessionCreate call session#create_session(<q-args>)
+
+" -nargsでコマンドが受け取る引数の数を設定できます
+"1つの引数を受け取れるようにする
+command! -nargs=1 SessionDelete call session#delete_session(<q-args>)
+
